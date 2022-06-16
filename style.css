@@ -67,7 +67,7 @@ nav > a:hover{
 main{
     
     background-color: white;
-    max-width: 830px;
+    max-width: 90%;
     height: 100%;
     margin: auto;
     
@@ -107,14 +107,14 @@ a{
        min-width: 380px;
     }
     div{
+        background-color: #063d1e;
         position: relative;
         top: 0px;
         right: 15px;
         left: -15px;
-        background-color: #063d1e;
-        width: 104%;
+        width: auto;
+        height: auto;
         margin-top: 8px;
-        height: 335px;
         margin: 0px;
         padding-top: 15px;
         margin-top: 10px;
@@ -123,8 +123,9 @@ a{
         position: static;
         top: 4px;
         left: 7px;
+        right: 5px;
         margin: auto;
-        width: 95%;
+        width: 94%;
     }
     p{
         text-align: justify;
