@@ -1,160 +1,183 @@
 @charset "UTF-8";
 
-@font-face {
-    font-family:'IDroid',serif;
-    src: url('fontes/IDroid\ Bold.otf') format('Otf');
-}
-@import url('Bebas Neue, cursive');
 *{
-    margin: 0;
-    padding: 0;
+padding: 0px;
+margin: 0px;
 }
-:root{
-    --cor0:var(#c5ebd6);
-    --cor1:var(#83E1AD);
-    --cor2:var(#3DDC84);
-    --cor3:var(#2FA866);
-    --cor4:var(#1A5C37);
-    --cor5:var(#063d1e);
-    --fonte0: var Arial, Helvetica, sans-serif;
-    --fonte1: var'Bebas Neue', cursive;
-    --fonte2: var 'IDroid',serif;
-}   
 body{
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #2FA866;
-  font-weight: bold;
-  font-style: italic;
-
+    background-image: linear-gradient(to top, #2FA866, #2B9C5E);   
+   font-size: 1.2em;
+   font-weight: bolder;
+   font-style: italic;
 }
+/*Cabeçalho*/
 header{
-   
-    padding-bottom: 40px;
-    background-image: linear-gradient(to bottom, #3DDC84, #063d1e);
-}
-
-
-header > h1#principal{
-   font-variant: var(--fonte1);
+    background-image: linear-gradient(to bottom, #2B9C5E, #084020);
+    text-align:center;
     color: white;
-    font-size: 26px;
-    padding-top: 22px;
+    padding: 5px;
+}
+header > h1{
+    padding-top: 20px;
+    font-family:  sans-serif;
+    text-transform: capitalize;
+    text-shadow: 3px -1px 0px black;
+}
+header > p{
+    text-transform: uppercase;
     text-align: center;
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.466);
+    padding-top: 20px;
+   font-weight: bolder;
+   margin-right: 10px;
 }
- p.tech{
-    text-align: center;
-    color: rgba(255, 255, 255, 0.616);
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.466);
-    padding-top: 20px;   
+ul.link > nav.navegacao{
+    display: block;
+    font-size: 18px;
+    text-align: left;
+    margin-top: 40px;
+    margin-left: -30px;
 }
-nav{
-    background-color: #063d1e;
-    padding: 15px;
-   
-}
-nav > a{
-    padding-left: 30px;
-    color: white;
+ nav.navegacao > a{
+    color:#2FA866;
     text-decoration: none;
-    text-shadow: 2px 2px 0px black;
+    padding-left: 15px;
+    border-radius: 15px;
 }
-nav > a:hover{
-        transition-duration: 0.5s;
-        background-color: #3ddc8598;
+nav.navegacao > a:hover{
+    background-color: #2b9c5e93;
+    text-decoration: underline;
+    transition-duration: 0.8s;
 }
-
+/*Container*/
 main{
-    
     background-color: white;
-    max-width: 90%;
-    height: 100%;
+    padding-top: 15px;   
     margin: auto;
-    
-}  
-strong{
-    color: #1A5C37;
+    box-shadow: 0px -2px 10px black;
+    max-width: 880px;
+    min-height: 400px;
 }
-strong:hover{
-    background-color: #3DDC84;
+article{
+    text-align: justify;
+    margin-left: 10px;
+    margin-right: 10px;
+    line-height: 2em;
+}
+ article > h1, h2{
+    font-family: monospace;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 10px;
+    color: #2B9C5E;
+    box-shadow: inset -46px 4px 12px 4px aquamarine;
+}
+p{
+    padding-top: 10px;
+    padding-bottom: 15px;
+    text-align: justify;
+    
+}
+/*Tamanho da 1 imagem*/
+article > div.dan-droid{
+    width: 100%;
+}
+img.dan-p{
+ display: block;
+}
+img.dan-m{
+    display: none;
+}
+@media(min-width:680px)
+{
+img.dan-p{
+    display: none;
+}
+img.dan-m{
+    display: block;
+}
+}
+/*Imagem da Irina Block*/
+article > div.irina{
+    width: 100%;
+}
+img.irina-pq{
+ display: block;
+}
+img.irina-m{
+ display: none;
+}
+@media(min-width:600px)
+{
+img.irina-pq{
+ display: none;
+}
+img.irina-m{
+ display: block;
+ width: 100%;
+}
+}
+/*Imagem Bugdroid*/
+div.bugdroid{
+    width: 100%;
+}
+img.bug{
+    width: 65%;
+}
+/* video android*/
+div.video{
+    background-color: #084020;
+    min-width: 50%;
+    height: 335px;
+    margin: -9px;
+    padding: 10px;
+}
+iframe{
+    width: 93%;
+    height: 309px;
+    position: relative;
+    top: 11px;
+    left: 18px;
+    padding: 4px;
+}
+/* Informação extra*/
+aside{
+    background-color: #2FA866;
+    border-radius: 20px;
+   margin-top: 20px;
+    width: 100%;
+    margin-right: 5px;
+}
+aside > h3{
+    color: white;
+    background-color: #084020;
+}
+aside > p{
+    text-align: justify;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+ul{
+    margin-left: 29px;
+    margin-right: -5px;
+    list-style-type: '✔️';
+    columns: 2;
+    list-style-position: outside;
 }
 a{
+    color: #2B9C5E;
+    background-color: #084020;
     text-decoration: none;
-    color: #1A5C37;}
-
-    article{
-        text-align: justify;
-        padding-right: 15px;
-        padding-left: 15px;
-        text-indent: 20px;
-        line-height: 2.5em;
-    }
-    article > h1{
-        font-family: 'IDroid',serif;
-        font-weight: bold;
-       color: #1A5C37;
-       padding-top: 10px;
-       padding-bottom: 10px;
-       text-indent: 0px;
-       
-    }
-    h2{
-        font-family: 'IDroid',serif;
-        color: #063d1e;
-        box-shadow: inset 2px 2px 26px #3DDC84;
-    }
-    picture.bugdroid > img{
-       min-width: 380px;
-    }
-    div{
-        background-color: #063d1e;
-        position: relative;
-        top: 0px;
-        right: 15px;
-        left: -15px;
-        width: auto;
-        height: auto;
-        margin-top: 8px;
-        margin: 0px;
-        padding-top: 15px;
-        margin-top: 10px;
-    }
-    div > iframe{
-        position: static;
-        top: 4px;
-        left: 7px;
-        right: 5px;
-        margin: auto;
-        width: 94%;
-    }
-    p{
-        text-align: justify;
-    }
-    h3{
-        color: white;
-        background-color: #044d08;
-       margin-top: 8px;
-       border-radius: 5px;
-    }
-    aside{
-       background-color: #3ddc85ad;
-       border-radius: 5px;
-      
-    }
-    ul {
-        list-style-type: '\2714\0020\0020';
-        columns: 2;
-        list-style-position: inside;
-    }
-    footer{
-        background-color: #063d1e;
-        text-align: center;
-        padding: 5px;
-        margin-top: 15px;
-    }
-    footer> a{
-        color: white;
-    }
-    em{
-        color: #2FA866;
-    }
+}
+strong{
+    color: forestgreen;
+}
+footer{
+    padding-top: 10px;
+}
+footer > p{
+    background-color: #084020;
+    color: white;
+    text-align: center;
+    padding: 4px;
+}
